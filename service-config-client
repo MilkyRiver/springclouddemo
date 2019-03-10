@@ -1,0 +1,29 @@
+    
+spring:
+  profiles:
+   active:
+   - dev
+   
+   
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka
+    register-with-eureka: true
+    
+---
+server:
+  port: 8005
+
+spring:
+  profiles: dev
+  application:
+   name: config-client-dev
+---
+server:
+  port: 8006
+
+spring:
+  profiles: test
+  application:
+    name: config-client-test
