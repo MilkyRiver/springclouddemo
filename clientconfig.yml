@@ -1,0 +1,20 @@
+spring:
+  profiles:
+   active:
+   - dev
+---
+server:
+  port: 8005
+
+spring:
+  profiles: dev
+  application:
+   name: config-client-dev
+---
+server:
+  port: 8006
+
+spring:
+  profiles: test
+  application:
+    name: config-client-test
